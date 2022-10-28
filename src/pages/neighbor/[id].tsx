@@ -11,7 +11,7 @@ const Neighbor = ({
 }: NeighborProps) => {
   if (!neighbor) return "Neighbor could not be found"
   return (
-    <div>I'm a neighbor
+    <div>I am a neighbor
       <ul>
         <li>Name: {neighbor.name}</li>
         <li>id: {neighbor.id}</li>
@@ -21,7 +21,7 @@ const Neighbor = ({
 }
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
-  let id = ctx.query.id
+  const id = ctx.query.id
 
   const neighbor = await getNeighbor({ id: id })
 

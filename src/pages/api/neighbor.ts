@@ -1,10 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { 
+  NextApiRequest, 
+  NextApiResponse,
+} from 'next'
 import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
 type NeighborParams = {
-  id: any,
+  id: string | string[] | undefined,
 }
 
 /**
