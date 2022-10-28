@@ -1,5 +1,5 @@
-import type { 
-  NextApiRequest, 
+import type {
+  NextApiRequest,
   NextApiResponse,
 } from 'next'
 import { PrismaClient } from '@prisma/client'
@@ -24,7 +24,9 @@ export const getNeighbor = async ({ id }: NeighborParams) => {
   return neighbor
 }
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
+const Neighbor = (req: NextApiRequest, res: NextApiResponse) => {
   const neighbor = getNeighbor({ id: req.query.id })
   res.status(200).json(neighbor)
 }
+
+export default Neighbor
