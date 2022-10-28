@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model account {
+  id Int @id @default(autoincrement())
+}
+
+model neighbor {
+  id             Int    @id @default(autoincrement())
+  name           String
+  address        String
+  average_scores Json   @default("{}") @db.Json
+  tags           Json?  @default("[]") @db.Json
+  images         Json   @default("[]") @db.Json
+}
+
+model review {
+  id Int @id @default(autoincrement())
+}
