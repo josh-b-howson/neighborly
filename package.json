@@ -10,10 +10,11 @@
   },
   "dependencies": {
     "@prisma/client": "^4.5.0",
-    "next": "12.2.5",
+    "next": "13.0",
     "next-auth": "^4.10.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.56.1",
     "zod": "^3.18.0"
   },
   "devDependencies": {
