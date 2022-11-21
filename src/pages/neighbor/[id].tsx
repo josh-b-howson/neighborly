@@ -15,12 +15,16 @@ const Neighbor = ({
   return (
     <Layout>
       <Media />
-      {/* <div>I am a neighbor
+      <div>I am a neighbor
         <ul>
           <li>Name: {neighbor.name}</li>
           <li>id: {neighbor.id}</li>
+          <li>address: {neighbor.address}</li>
+          {/* <li>average_scores: {neighbor.average_scores}</li> */}
+          {/* <li>tags: {neighbor.tags}</li> */}
+          {/* <li>images: {neighbor.images}</li> */}
         </ul>
-      </div> */}
+      </div>
     </Layout>
   )
 }

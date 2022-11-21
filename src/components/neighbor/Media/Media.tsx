@@ -7,7 +7,7 @@ const Image = () => {
 }
 
 const Media = () => {
-  const [coolState, setCoolState] = useState<string[]>([])
+  const [coolState, setCoolState] = useState<string[]>(["", "", "", "", "", "", "", "", "", "",])
   return <section
     className={styles.media}>
     <div className="slider">

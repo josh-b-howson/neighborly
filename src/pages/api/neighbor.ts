@@ -24,6 +24,19 @@ export const getNeighbor = async ({ id }: NeighborParams) => {
   return neighbor
 }
 
+type ManyNeighborsParams = {
+  take?: number,
+}
+/**
+ * Fetches all neighbors data.
+ * 
+ * @returns all neighbors data
+ */
+export const getManyNeighbors = async ({ take = 10 }: ManyNeighborsParams) => {
+  const neighbors = await prisma.neighbor.findMany({ take: take })
+  return neighbors
+}
+
 const Neighbor = (req: NextApiRequest, res: NextApiResponse) => {
   const neighbor = getNeighbor({ id: req.query.id })
   res.status(200).json(neighbor)
