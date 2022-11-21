@@ -17,7 +17,7 @@ const Home: NextPage = ({
       <h1>Welcome to neighborly</h1>
       <p>Neighbors: {neighbors?.length}</p>
       <ul>{neighbors.map(neighbor =>
-        <Link style={{ display: 'inline-block' }} href={`/neighbor/${neighbor.id}`}>
+        <Link key={neighbor.id} style={{ display: 'inline-block' }} href={`/neighbor/${neighbor.id}`}>
           <p>Go to neighbor {neighbor.id}</p>
           <p>Name: {neighbor.name}</p>
           <p>id: {neighbor.id}</p>
