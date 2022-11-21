@@ -2,7 +2,7 @@ import { GetServerSideProps } from "next"
 import { getNeighbor } from "../api/neighbor"
 import { neighbor } from '@prisma/client'
 import { Layout } from "../../components/layout"
-import { Media } from '../../components/neighbor'
+import { Media } from "../../components/neighbor"
 
 type NeighborProps = {
   neighbor: neighbor,

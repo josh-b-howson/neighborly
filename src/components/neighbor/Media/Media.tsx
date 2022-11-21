@@ -12,8 +12,8 @@ const Media = () => {
     className={styles.media}>
     <div className="slider">
       <div className="track">
-        {coolState.map(() =>
-          <Image/>
+        {coolState.map((val, index) =>
+          <Image key={index} />
         )}
       </div>
     </div>
