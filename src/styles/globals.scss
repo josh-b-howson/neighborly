@@ -1,0 +1,42 @@
+@import './fonts';
+@import './variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.4rem;
+  background-color: var(--bg-panel);
+}
+
+:where(a) {
+  color: #555;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: .25em;
+  text-underline-position: below;
+  text-underline-position: under;
+  transition: color 75ms ease-out;
+}
+
+:where(a:hover) {
+  color: #222;
+}
+
+:where(a:active) {
+  color: #000;
+}

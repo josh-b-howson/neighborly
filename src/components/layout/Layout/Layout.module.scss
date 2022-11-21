@@ -1,9 +1,47 @@
 .layout {
-  header {
-    background-color: red;
-  }
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
 
-  footer {
-    background-color: blue;
+.header {
+  flex: 0 0 auto;
+  background-color: var(--color-panel);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-block-end: .1rem solid var(--border-color-panel);
+  padding-inline: var(--gutter-x);
+  padding-block: 2rem;
+
+  :global {
+    .brand {
+      font-size: 2.8rem;
+      color: var(--arbor-500);
+      text-decoration: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav {
+      margin-inline-start: auto;
+      display: flex;
+      align-items: center;
+      gap: 3.2rem;
+    }
   }
+}
+
+.footer {
+  flex: 0 0 auto;
+  margin-block-start: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-text-light);
+  padding-inline: var(--gutter-x);
+  padding-block: 4rem;
+  background: #fafafa;
+  border-block-start: .1rem solid var(--border-color-panel-light);
 }

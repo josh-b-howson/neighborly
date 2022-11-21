@@ -1,0 +1,40 @@
+.button {
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: 700;
+  transition-property: color, transform;
+  transition-duration: 75ms;
+  transition-timing-function: ease-out;
+  transform: scale(1);
+  
+  &:active {
+    transform: scale(.97);
+    transition-duration: 25ms;
+  }
+
+  // Outline
+  &:global(.outline) {
+    border: .3rem solid var(--color-border);
+  }
+
+  // Arbor
+  &:global(.arbor) {
+    color: var(--arbor-500);
+    --color-border: currentColor;
+    background: var(--bg-panel);
+
+    &:hover {
+      color: var(--arbor-600);
+    }
+
+    &:active {
+      color: var((--arbor-400))
+    }
+  }
+
+  // Medium size / size not defined
+  &:global(:is(.sz-md, :not([class*="sz-"]))) {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+  }
+}
